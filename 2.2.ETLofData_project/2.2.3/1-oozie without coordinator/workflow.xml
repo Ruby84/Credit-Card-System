@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow-app xmlns="uri:oozie:workflow:0.2" name="importAllTableData">
+	<start to="sqoop-node1"/>
+	
+	<action name="sqoop-node1">
+		<sqoop xmlns="uri:oozie:sqoop-action:0.2">
+			<job-tracker>${jobTracker}</job-tracker>
+			<name-node>${nameNode}</name-node>
+			<prepare>
+				<delete path="${nameNode}/user/maria_dev/Credit_Card_System_Oozie/CDW_SAPP_BRANCH"/>
+			</prepare>
+			<configuration>
+				<property>
+					<name>mapred.job.queue.name</name>
+					<value>${queueName}</value>
+				</property>
+			</configuration>
+			<command>job --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --exec CDW_SAPP_BRANCH_Oozie</command>
+		</sqoop>
+		<ok to="sqoop-node2"/>
+		<error to="fail-sqoop"/>
+	</action>
+	
+	
+
+<action name="sqoop-node2">
+		<sqoop xmlns="uri:oozie:sqoop-action:0.2">
+			<job-tracker>${jobTracker}</job-tracker>
+			<name-node>${nameNode}</name-node>
+			<prepare>
+				<delete path="${nameNode}/user/maria_dev/Credit_Card_System_Oozie/CDW_SAPP_CREDITCARD"/>
+			</prepare>
+			<configuration>
+				<property>
+					<name>mapred.job.queue.name</name>
+					<value>${queueName}</value>
+				</property>
+			</configuration>
+			<command>job --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --exec CDW_SAPP_CREDITCARD_Oozie</command>
+		</sqoop>
+		<ok to="sqoop-node3"/>
+		<error to="fail-sqoop"/>
+	</action>
+
+
+<action name="sqoop-node3">
+		<sqoop xmlns="uri:oozie:sqoop-action:0.2">
+			<job-tracker>${jobTracker}</job-tracker>
+			<name-node>${nameNode}</name-node>
+			<prepare>
+				<delete path="${nameNode}/user/maria_dev/Credit_Card_System_Oozie/CDW_SAPP_CUSTOMER"/>
+			</prepare>
+			<configuration>
+				<property>
+					<name>mapred.job.queue.name</name>
+					<value>${queueName}</value>
+				</property>
+			</configuration>
+			<command>job --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --exec CDW_SAPP_CUSTOMER_Oozie</command>
+		</sqoop>
+		<ok to="sqoop-node4"/>
+		<error to="fail-sqoop"/>
+	</action>
+
+
+
+
+<action name="sqoop-node4">
+		<sqoop xmlns="uri:oozie:sqoop-action:0.2">
+			<job-tracker>${jobTracker}</job-tracker>
+			<name-node>${nameNode}</name-node>
+			<prepare>
+				<delete path="${nameNode}/user/maria_dev/Credit_Card_System_Oozie/CDW_SAPP_TIME"/>
+			</prepare>
+			<configuration>
+				<property>
+					<name>mapred.job.queue.name</name>
+					<value>${queueName}</value>
+				</property>
+			</configuration>
+			
+
+			<command>job --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --exec CDW_SAPP_TIME_Oozie</command>
+			<archive>/user/oozie/oozie_scripts/lib/java-json.jar#java-json.jar</archive>
+		</sqoop>
+		<ok to="hive-node"/>
+		<error to="fail-sqoop"/>
+	</action>
+
+
+
+<action name="hive-node"> 
+ 		<hive xmlns="uri:oozie:hive-action:0.2"> 
+ 			<job-tracker>${jobTracker}</job-tracker> 
+ 			<name-node>${nameNode}</name-node> 
+ 			
+			<configuration> 
+				<property> 
+ 					<name>mapred.job.queue.name</name> 
+ 					<value>${queueName}</value> 
+ 				</property> 
+			</configuration> 
+ 			<script>/user/maria_dev/OozieWithoutcoordinator/hivetables.hql</script> 
+ 			
+ 		</hive> 
+ 		<ok to="end"/> 
+ 		<error to="fail-hive"/> 
+ 	</action> 
+		
+	<kill name="fail-sqoop">
+		<message>Sqoop action failed with [${wf:errorMessage(wf:lastErrorNode())}]</message>	</kill>
+	
+ 	<kill name="fail-hive"> 
+ 		<message>Hive action failed with [${wf:errorMessage(wf:lastErrorNode())}]</message> 
+ 	</kill> 
+	
+	<end name="end"/>
+	
+</workflow-app>
+
+
+
+
+

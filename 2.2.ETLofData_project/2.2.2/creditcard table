@@ -1,0 +1,21 @@
+credit card into table CDW_SAPP_F_CREDIT_CARD
+-------------------------------------------------------------------------------------
+
+---> use CDW_SAPP;
+
+---->drop table CDW_SAPP_F_CREDIT_CARD;
+
+-->CREATE TABLE CDW_SAPP_F_CREDIT_CARD (
+TRANSACTION_ID INT,
+CUST_CC_NO STRING,
+TIMEID STRING,
+CUST_SSN INT,
+BRANCH_CODE INT,
+TRANSACTION_TYPE STRING,
+TRANSACTION_VALUE DECIMAL(30,3)
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n';
+
+---->load data inpath '/user/maria_dev/Credit_Card_System/CDW_SAPP_CREDITCARD' into table CDW_SAPP_F_CREDIT_CARD;

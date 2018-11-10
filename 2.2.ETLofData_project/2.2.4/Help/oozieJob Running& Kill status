@@ -1,0 +1,17 @@
+  
+
+oozie job -oozie http://localhost:11000/oozie -config  job.properties  -run
+
+oozie jobs -jobtype coordinator -filter status=RUNNING
+
+oozie job -suspend `<coord_id>`
+
+
+oozie job -resume <coord_id>
+
+oozie job -kill <coord_id>
+
+
+oozie job -config job.properties -run
+
+

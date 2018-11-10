@@ -1,0 +1,21 @@
+
+
+sqoop job  --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --list
+.....................................................................................
+
+sqoop job  --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --exec Branch_optimized
+
+sqoop job  --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --exec CreditCard_optimized
+
+sqoop job  --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --exec Time_optimized
+
+sqoop job  --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --exec Customer_optimized
+
+......................................................................
+sqoop job  --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --delete Branch_optimized
+
+sqoop job  --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --delete CreditCard_optimized
+
+sqoop job  --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --delete Time_optimized
+
+sqoop job  --meta-connect jdbc:hsqldb:hsql://localhost:16000/sqoop --delete Customer_optimized

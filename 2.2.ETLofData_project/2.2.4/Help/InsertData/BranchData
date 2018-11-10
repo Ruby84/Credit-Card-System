@@ -1,0 +1,37 @@
+
+	
+
+Recent last updated value=2018-11-16 10:30:20
+
+
+
+//
+INSERT INTO `CDW_SAPP_BRANCH` VALUES
+(347,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-11-16 10:40:20');
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES
+(348,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-11-16 10:45:22');
+
+...................................................................................................
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES
+(349,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-11-16 10:50:20');
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES
+(350,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-11-16 10:55:20');
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES
+(351,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-11-16 11:25:20');
+
+//
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES
+(401,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-11-17 11:30:20');
+//
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES
+(402,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-11-18 11:30:20');
+
+
+
+

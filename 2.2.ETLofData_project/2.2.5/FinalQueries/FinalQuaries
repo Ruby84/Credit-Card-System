@@ -1,0 +1,32 @@
+1.1) Find the top 20 zip codes(hint: branch_zip) by total
+transaction value
+
+
+
+
+In ambari
+..............
+
+
+SELECT SUM(cc.transaction_value), br.branch_zip  
+  from cdw_sapp_f_credit_card_oozie_optimized cc
+  join cdw_sapp_d_branch_oozie_optimized br
+  on br.branch_code = cc.branch_code group by br.branch_zip order by 1 desc  limit 20;
+
+
+
+2) Find total transaction value for each transaction
+type by Quarter in 2018
+
+
+
+
+select sum(cc.transaction_value),cc.transaction_type type ,t.quarter ,t.year
+from cdw_sapp_f_credit_card_oozie_optimized cc 
+join 
+cdw_sapp_d_time_oozie_optimized t on (cc.timeid) = (t.timeid) group by cc.transaction_type,t.quarter,t.year limit 10;
+
+
+
+
+

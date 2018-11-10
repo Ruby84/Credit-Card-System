@@ -1,0 +1,20 @@
+time data into table CDW_SAPP_D_TIME
+---------------------------------------------------------------------------------------
+---> create database cdw_sapp;
+
+---->use cdw_sapp;
+
+----> drop table CDW_SAPP_D_TIME;
+
+-->CREATE TABLE CDW_SAPP_D_TIME (
+TIMEID STRING,
+DAY INT,
+MONTH INT,
+QUARTER STRING,
+YEAR INT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n';
+
+---> load data inpath '/user/maria_dev/Credit_Card_System/CDW_SAPP_TIME' into table CDW_SAPP_D_TIME;

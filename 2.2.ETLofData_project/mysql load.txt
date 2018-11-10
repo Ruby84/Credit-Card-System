@@ -1,0 +1,37 @@
+
+INSERT INTO `CDW_SAPP_CREDITCARD` VALUES (46697,17,11,2018,4210653344660822,123451007,45,'Healthcare',82.290)
+
+INSERT INTO `CDW_SAPP_CREDITCARD` VALUES (46698,17,11,2018,4210653344660822,123451007,45,'Healthcare',82.290)
+
+INSERT INTO `CDW_SAPP_CREDITCARD` VALUES (46699,17,11,2018,4210653344660822,123451007,45,'Healthcare',82.290)
+
+INSERT INTO `CDW_SAPP_CREDITCARD` VALUES (46700,17,11,2018,4210653344660822,123451007,45,'Healthcare',82.290)
+
+INSERT INTO `CDW_SAPP_CREDITCARD` VALUES (46701,17,11,2018,4210653344660822,123451007,45,'Healthcare',82.290)
+
+
+=======================================================================================================================================
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES(201,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-04-19 100:51:48')
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES(202,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-04-19 100:51:49')
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES(203,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-04-19 100:51:50')
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES(204,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-04-19 100:51:50')
+
+INSERT INTO `CDW_SAPP_BRANCH` VALUES(205,'Example Bank','Bridle Court','Lakeville','MN',55044,'1234565276','2018-04-19 100:51:50')
+
+===========================================================================================================================================
+
+INSERT INTO `CDW_SAPP_CUSTOMER` VALUES ('Alec','Wm','Hooper',123450000,'4210653310060000','656','Main Street North','Natchez','MS','United States', '39120', 1237818,'AHooper@example.com', '2018-04-21 22:19:04')
+
+INSERT INTO `CDW_SAPP_CUSTOMER` VALUES ('Alec','Wm','Hooper',123450001,'4210653310060001','656','Main Street North','Natchez','MS','United States', '39120', 1237818,'AHooper@example.com', '2018-04-21 22:19:04')
+
+INSERT INTO `CDW_SAPP_CUSTOMER` VALUES ('Alec','Wm','Hooper',123450002,'4210653310060002','656','Main Street North','Natchez','MS','United States', '39120', 1237818,'AHooper@example.com', '2018-04-21 22:19:04')
+
+INSERT INTO `CDW_SAPP_CUSTOMER` VALUES ('Alec','Wm','Hooper',123450003,'4210653310060003','656','Main Street North','Natchez','MS','United States', '39120', 1237818,'AHooper@example.com', '2018-04-21 22:19:04')
+
+INSERT INTO `CDW_SAPP_CUSTOMER` VALUES ('Alec','Wm','Hooper',123450004,'4210653310060004','656','Main Street North','Natchez','MS','United States', '39120', 1237818,'AHooper@example.com', '2018-04-21 22:19:05')
+
+INSERT INTO `CDW_SAPP_CUSTOMER` VALUES ('Alec','Wm','Hooper',123450005,'4210653310060005','656','Main Street North','Natchez','MS','United States', '39120', 1237818,'AHooper@example.com', '2018-04-21 22:19:05')

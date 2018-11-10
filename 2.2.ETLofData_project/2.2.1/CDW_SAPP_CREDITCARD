@@ -1,0 +1,16 @@
+
+
+sqoop job 
+--create CDW_SAPP_CREDITCARD
+-- import 
+--connect jdbc:mysql://localhost:3306/CDW_SAPP 
+--driver com.mysql.jdbc.Driver 
+--query  
+'SELECT TRANSACTION_ID, CREDIT_CARD_NO, CONCAT(YEAR, LPAD(MONTH, 2, '0'), LPAD(DAY, 2, '0')) AS TIMEID, CUST_SSN, BRANCH_CODE, TRANSACTION_TYPE, TRANSACTION_VALUE FROM CDW_SAPP_CREDITCARD WHERE $CONDITIONS'
+--fields-terminated-by ',' 
+--target-dir /user/maria_dev/Credit_Card_System/CDW_SAPP_CREDITCARD
+-m 1
+
+
+
+sqoop job -exec CDW_SAPP_CREDITCARD
