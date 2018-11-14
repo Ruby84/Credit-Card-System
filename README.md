@@ -17,7 +17,7 @@ Functions:
 6. generates monthly bill for a credit card number for a given month and year. 
 7. displays the transactions made by a customer between two dates. Order by year, month, and day in descending order. 
 
-## Second_Folder: ETLofData_Project, in Hadoop environment
+## Second_Folder: ETLofData_Project folder, in Hadoop environment
 
 ###ETL of Data 
 
