@@ -25,7 +25,7 @@ Functions:
 2.2.1. Data Extraction and Transportation Module 
 
 created four different staging tables in order to import data from RDBMS into HDFS using sqoop job.
-transformed the data based on requirements found in the Mapping Document prior to loading the data into Hadoop. 
+Transformed the data based on requirements found in the Mapping Document prior to loading the data into Hadoop. 
 Those tables are:
 
 1. CDW_SAPP_BRANCH
@@ -107,7 +107,7 @@ Hive, stage and target, optimized tables that we load and/or insert data into ar
 
 
 
-2.2.5 Used Hive Query and Hive Visualization tool to visualize in Ambari:
+2.2.5 Created Hive Query and Hive Visualization tool to visualize the outcome in Ambari:
 1) The top 20 zip codes(hint: branch_zip) by total transaction value 
 2) Total transaction value for each transaction type by Quarter in 2018 
 
