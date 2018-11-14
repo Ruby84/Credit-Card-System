@@ -38,10 +38,10 @@ Those tables are:
 loaded  data from HDFS into Hive(target tables).
 Target tables are called:
 
-1.CDW_SAPP_D_BRANCH
-2.CDW_SAPP_F_CREDIT_CARD
-3.CDW_SAPP_D_CUSTOMER
-4.CDW_SAPP_D_TIME
+1. CDW_SAPP_D_BRANCH
+2. CDW_SAPP_F_CREDIT_CARD
+3. CDW_SAPP_D_CUSTOMER
+4. CDW_SAPP_D_TIME
 
 
 
@@ -107,8 +107,7 @@ Hive, stage and target, optimized tables that we load and/or insert data into ar
 
 
 
-2.2.5
-Used Hive Query and Hive Visualization tool to visualize in Ambari:
+2.2.5 Used Hive Query and Hive Visualization tool to visualize in Ambari:
 1) The top 20 zip codes(hint: branch_zip) by total transaction value 
 2) Total transaction value for each transaction type by Quarter in 2018 
 
